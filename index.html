@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Random Code Generator</title>
+<script>
+function generateRandomCode() {
+    var length = 12;
+    var characters = 'ABCDEFGHIJKLMNOPQRSTUVWXYZabcdefghijklmnopqrstuvwxyz0123456789';
+    var result = '';
+
+    for (var i = 0; i < length; i++) {
+        var randomIndex = Math.floor(Math.random() * characters.length);
+        result += characters.charAt(randomIndex);
+    }
+
+    return result;
+}
+
+function displayRandomCode() {
+    document.getElementById('code').textContent = generateRandomCode();
+}
+</script>
+</head>
+<body>
+<h1>vbucks Code Generator</h1>
+<p>Click the button below for free vbucks:</p>
+<button onclick="displayRandomCode()">Generate Code</button>
+<p id="code"></p>
+</body>
+</html>
